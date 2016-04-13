@@ -24,15 +24,17 @@
     <!-- Include jQuery, jQuery UI, elFinder (REQUIRED) -->
 
     <script type="text/javascript">
+        document.domain = "nx.dev";
         $().ready(function () {
             var elf = $('#elfinder').elfinder({
                 // set your elFinder options here
                 <?php if($locale){ ?>
                     lang: '<?= $locale ?>', // locale
                 <?php } ?>
-                customData: { 
+                customData: {
                     _token: '<?= csrf_token() ?>'
                 },
+                height: '100%',
                 url: '<?= route("elfinder.connector") ?>',  // connector URL
                 dialog: {width: 900, modal: true, title: 'Select a file'},
                 resizable: false,
