@@ -42,6 +42,7 @@
                 customData: { 
                     _token: '<?= csrf_token() ?>'
                 },
+                height: $(window).height(),
                 url: '<?= route("elfinder.connector") ?>',  // connector URL
                 getFileCallback : function(file) {
                     window.opener.CKEDITOR.tools.callFunction(funcNum, file.url);
