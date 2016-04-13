@@ -33,6 +33,7 @@
                     lang: '<?= $locale ?>', // locale
                 <?php } ?>
                 height: $(window).height(),
+                resizable:false,
                 customData: { 
                     _token: '<?= csrf_token() ?>'
                 },
