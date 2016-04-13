@@ -41,7 +41,7 @@
                 ui: ['toolbar', 'path','stat'],
                 onlyMimes: [<?= $mimeTypes ?>],
                 rememberLastDir : false,
-                height: 300,
+                height: $(window).height(),
                 defaultView: 'list',
                 getFileCallback: function (file) {
                     window.parent.processSelectedFile(file, '<?= $input_id?>');
