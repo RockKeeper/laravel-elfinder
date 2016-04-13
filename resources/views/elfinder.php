@@ -21,16 +21,18 @@
     <script src="<?= asset($dir."/js/i18n/elfinder.$locale.js") ?>"></script>
     <?php } ?>
 
-    <!-- elFinder initialization (REQUIRED) -->
+    <!-- elFinder initializaalert("ddd");tion (REQUIRED) -->
     <script type="text/javascript" charset="utf-8">
         // Documentation for client options:
         // https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
+
         $().ready(function() {
             $('#elfinder').elfinder({
                 // set your elFinder options here
                 <?php if($locale){ ?>
                     lang: '<?= $locale ?>', // locale
                 <?php } ?>
+                height: $(window).height(),
                 customData: { 
                     _token: '<?= csrf_token() ?>'
                 },
