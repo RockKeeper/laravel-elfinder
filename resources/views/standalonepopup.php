@@ -34,7 +34,7 @@
                 customData: {
                     _token: '<?= csrf_token() ?>'
                 },
-                height: '100%',
+                height: $(window).height(),
                 url: '<?= route("elfinder.connector") ?>',  // connector URL
                 dialog: {width: 900, modal: true, title: 'Select a file'},
                 resizable: false,
